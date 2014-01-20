@@ -1,0 +1,4 @@
+Players:<br/>
+  <% Player.all.each do |player|%>
+    <%= link_to player.name, player %><br/>
+  <% end %>

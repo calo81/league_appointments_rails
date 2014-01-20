@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+Name: <%= @player.name %><br/>
+Email: <%= @player.email %><br/>
+Phone: <%= @player.phone%><br/><br/>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

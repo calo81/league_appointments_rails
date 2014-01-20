@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+League: <%= @division.league.title %><br/>
+Division Number: <%= @division.title %><br/>
+Number of Players: <%= @division.players.size %><br/><br/>
+<%= render 'players/list', division: @division %>
+
+<%= link_to 'Edit', edit_league_division_path(@division.league, @division) %> <br/>
+<%= link_to 'Destroy', [@division.league, @division], method: :delete, data: { confirm: 'Are you sure?' } %>

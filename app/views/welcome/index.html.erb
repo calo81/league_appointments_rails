@@ -1,0 +1,11 @@
+Leagues: <br/><br/>
+<% League.all.each do |league| %>
+ <%= link_to league.title, league %><br/>
+<% end %><br/>
+<%= link_to 'New League', new_league_path %><br/><br/>
+
+Players: <br/><br/>
+<% Player.all.each do |player| %>
+ <%= link_to player.name, player %><br/>
+<% end %><br/>
+<%= link_to 'New Player', new_player_path %><br/><br/>

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h4><%= @league.title %></h4><br/>
+Start Date: <%= @league.start_date %><br/>
+End Date: <%= @league.end_date %><br/>
+Number of divisions: <%= @league.divisions.size%><br/><br/>
+<%= render 'divisions/list', league: @league %>
+
+<%= link_to 'Edit', edit_league_path(@league) %> |
+<%= link_to 'Back', leagues_path %>

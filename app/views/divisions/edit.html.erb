@@ -1,0 +1,17 @@
+<h1>Editing division</h1>
+League: <%= @division.league.title %><br/>
+<%= render 'form' %>
+Number of Players: <%= @division.players.size %><br/><br/>
+<%= render 'players/list', division: @division %><br/><br/>
+Full List of Players:<br/>
+<% Player.all.each do |player|%>
+  <%= form_for [@division.league, @division] do |f| %>
+    <input name="player_id" type="hidden" value="<%= player.id %>" />
+    <%= player.name %>
+	<%= f.submit 'Add Player to Division' %>
+  <% end %>	
+<% end %>
+
+
+<%= link_to 'Show', [@division.league, @division] %> |
+<%= link_to 'Back', league_divisions_path(@division.league) %>

@@ -1,0 +1,7 @@
+<% unless league.divisions.empty? %>
+Divisions:<br/>
+  <% league.divisions.each do |division|%>
+    <%= link_to division.title, [division.league, division] %><br/>
+  <% end %>
+  <br/><br/>
+<% end %>

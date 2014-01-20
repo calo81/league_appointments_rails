@@ -1,0 +1,7 @@
+<h1>Editing league</h1>
+
+<%= render 'form' %>
+<%= render 'divisions/list', league: @league %>
+<%= link_to 'Add Division', new_league_division_path(@league) %> |
+<%= link_to 'Show', @league %> |
+<%= link_to 'Back', leagues_path %>

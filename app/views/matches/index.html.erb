@@ -1,0 +1,45 @@
+<h1>Listing matches</h1>
+
+<table>
+  <tr>
+    <th>Schedule for</th>
+    <th>Schedule accepted</th>
+    <th>Schedule accepted by</th>
+    <th>Played on</th>
+    <th>Result</th>
+    <th>Winner</th>
+    <th>Scheduled by</th>
+    <th>Division</th>
+    <th>Potential oponents</th>
+    <th>Player1</th>
+    <th>Player2</th>
+    <th>Loser</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @matches.each do |match| %>
+  <tr>
+    <td><%= match.schedule_for %></td>
+    <td><%= match.schedule_accepted %></td>
+    <td><%= match.schedule_accepted_by %></td>
+    <td><%= match.played_on %></td>
+    <td><%= match.result %></td>
+    <td><%= match.winner %></td>
+    <td><%= match.scheduled_by %></td>
+    <td><%= match.division %></td>
+    <td><%= match.potential_oponents %></td>
+    <td><%= match.player1 %></td>
+    <td><%= match.player2 %></td>
+    <td><%= match.loser %></td>
+    <td><%= link_to 'Show', match %></td>
+    <td><%= link_to 'Edit', edit_match_path(match) %></td>
+    <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Match', new_match_path %>

@@ -1,0 +1,22 @@
+<h1>Listing divisions</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+League: <%= @league.title %>
+<% @divisions.each do |division| %>
+  <tr>
+	<td><h4><%= division.title %></h4>&nbsp;&nbsp;</td>
+    <td><%= link_to 'Show', division %></td>
+    <td><%= link_to 'Edit', edit_division_path(division) %></td>
+    <td><%= link_to 'Destroy', division, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Division', new_league_division_path(@league) %>

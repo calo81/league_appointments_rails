@@ -1,0 +1,7 @@
+<% unless division.players.empty? %>
+Players:<br/>
+  <% division.players.each do |player|%>
+    <%= link_to player.name, player %><br/>
+  <% end %>
+  <br/><br/>
+<% end %>

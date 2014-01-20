@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Schedule for:</b>
+  <%= @match.schedule_for %>
+</p>
+
+<p>
+  <b>Schedule accepted:</b>
+  <%= @match.schedule_accepted %>
+</p>
+
+<p>
+  <b>Schedule accepted by:</b>
+  <%= @match.schedule_accepted_by %>
+</p>
+
+<p>
+  <b>Played on:</b>
+  <%= @match.played_on %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @match.result %>
+</p>
+
+<p>
+  <b>Winner:</b>
+  <%= @match.winner %>
+</p>
+
+<p>
+  <b>Scheduled by:</b>
+  <%= @match.scheduled_by %>
+</p>
+
+<p>
+  <b>Division:</b>
+  <%= @match.division %>
+</p>
+
+<p>
+  <b>Potential oponents:</b>
+  <%= @match.potential_oponents %>
+</p>
+
+<p>
+  <b>Player1:</b>
+  <%= @match.player1 %>
+</p>
+
+<p>
+  <b>Player2:</b>
+  <%= @match.player2 %>
+</p>
+
+<p>
+  <b>Loser:</b>
+  <%= @match.loser %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>
